@@ -27,10 +27,6 @@ int area(int x, int y) {
 pii calculate() {
 
   int len = rods.size();
-  for(int i = 0 ; i < len ; ++i) {
-    cout << rods[i].first << ' ' << rods[i].second << endl;
-  }
-  cout << "-------------------------------\n";
   int ret = 0;
   int best = 0;
   for(int i = 0 ; i < 1 << len ; ++i) {
@@ -48,7 +44,6 @@ pii calculate() {
       }
     }
   }
-  cout << "answer is :        " << ret << ' ' << best << endl;
   return make_pair(ret, best);
 }
 
